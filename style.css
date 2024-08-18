@@ -1,0 +1,160 @@
+/* Container principal */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f0f0;
+}
+
+/* Container do formulário */
+.form-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h1 {
+  position: relative;
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 10px;
+  background-color: #7d0d0d;
+  border-radius: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  padding: 0.75rem;
+  margin-bottom: 2rem;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: transparent;
+  outline: none;
+}
+
+input:focus {
+  border-color: #7d0d0d; /* Cor da borda quando o input está focado */
+  box-shadow: 0 0 10px 8px rgba(125, 13, 13, 0.5); /* Efeito de luz neon com cor de fundo e difusão */
+}
+
+button {
+  padding: 0.75rem;
+  background: #7d0d0d;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+button:hover {
+  background: #c21515;
+}
+
+p {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+a {
+  color: #7d0d0d;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.destaque {
+  color: #7d0d0d;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px; /* Reduz o tamanho da fonte para telas menores */
+  }
+
+  .form-container {
+    margin: 20px;
+
+    padding: 1rem;
+    gap: 15px; /* Reduz o espaço entre os elementos */
+    max-width: 90%; /* Aumenta a largura máxima para se ajustar melhor em telas pequenas */
+  }
+
+  input[type="email"],
+  input[type="password"],
+  input[type="text"] {
+    padding: 0.5rem;
+    margin-bottom: 1.5rem; /* Reduz o espaço inferior */
+  }
+
+  button {
+    padding: 0.5rem;
+    font-size: 1.25rem; /* Reduz o tamanho da fonte do botão */
+  }
+
+  h1::before {
+    width: 30px;
+    height: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px; /* Tamanho da fonte ainda menor para telas muito pequenas */
+  }
+
+  .form-container {
+    margin: 20px;
+    padding: 0.75rem;
+    gap: 10px; /* Reduz ainda mais o espaço entre os elementos */
+    max-width: 95%; /* Ajusta a largura máxima para se ajustar ainda mais em telas pequenas */
+  }
+
+  input[type="email"],
+  input[type="password"],
+  input[type="text"] {
+    padding: 0.5rem;
+    margin-bottom: 1rem; /* Mais redução no espaço inferior */
+  }
+
+  button {
+    padding: 0.5rem;
+    font-size: 1rem; /* Tamanho da fonte do botão reduzido */
+  }
+
+  h1::before {
+    width: 25px;
+    height: 5px;
+  }
+}
